@@ -1,0 +1,201 @@
+/* GENERAL STYLING*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.main{
+    margin: 0px 10%;
+}
+
+/* PORTFOLIO SECTION STYLING */
+.portfolio_section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.stocks_area{
+    width: 30%;
+}
+.chart_area {
+    width: 50%;
+    margin-right: auto;
+}
+
+/* ATTEMPTING TO OVERRIDE THE PLOTLY STYLING */
+.chart_area user-select-none, .chart_area svg-container{
+    width: 100%;
+    height: 400px;
+}
+
+/* STYLING THE SEARCH FORM AREA */
+.search_form_area{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.search_form_area input{
+    width: 100%;
+    padding: 15px;
+    background: #eee;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+.search_form_area input:focus{
+    outline: none;
+    border: none;
+}
+
+
+.search_form_area button{
+    background: black;
+    color: white;
+    padding: 15px;
+    margin-top: 15px;
+    max-width: 40%;
+    border: none;
+    border-radius: 5px;
+}
+
+/* BOTTOM MAIN STYLING */
+.bottom_main{
+    background: rgb(237, 237, 237);
+}
+.stock_list_section{
+    height: 500px;
+    padding: 50px 0px;
+}
+
+.stock_area{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.stock_tile{
+    padding: 20px;
+    background: 	#b0d8b5;
+    color: black;
+    border-radius: 5px;
+    margin: 10px;
+    flex-basis: 250px;
+    flex-grow: 1;
+    border: 1px solid black;
+}
+/* STOCK NAVBAR STYLING*/
+.stock_navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.stock_navbar .back_button{
+    width: 10%;
+}
+
+.stock_navbar .back_button button{
+    width: 100%;
+}
+.stock_navbar button{
+    background: black;
+    color: white;
+    padding: 15px;
+    max-width: 80%;
+    border: none;
+    border-radius: 5px;
+}
+
+.purchase_form button{
+    background: darkgreen;
+    color: white;
+}
+.purchase_form{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+}
+
+.purchase_form > * {
+    width: 50%;
+}
+
+.stock_navbar select{
+    outline: none;
+    border: 1px solid black;
+    padding: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+/* STOCK INFO STYLING*/
+.stock_info_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+    height: 500px;
+}
+.stock_info_section h3{
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    margin-bottom: 15px;
+}
+.summary_area{
+    width: 60%
+}
+
+.fundamentals_area{
+    width: 35%
+}
+
+/* ADDING SOME MEDIA QUERIES */
+@media screen and (max-width: 1200px){
+    .main{
+        margin: 0px 5%;
+    }
+    .portfolio_section{
+        flex-direction: column;
+    }
+
+    body{
+        padding: 100px 0px;
+    }
+    .stocks_area{
+        max-width: 600px;
+    }
+
+    .search_form_area{
+        flex-direction: row;
+    }
+
+    .search_form_area{
+        margin-top: 0;
+        margin-left: 15px;
+    }
+
+    .stocks_area{
+        max-width: 50%;
+    }
+    .chart_area {
+        max-width: 30%;
+        align-self: left;
+
+    }
+    
+}

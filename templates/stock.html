@@ -1,0 +1,24 @@
+{% extends "stock_layout.html" %}
+
+{% block title %}
+    <!-- adding the stock's name as per the database -->
+    {{stock_data["name"]}}
+{% endblock %}
+
+{% block stock_name %}
+    <!-- Adding the stock's name and ticker in the title -->
+    <h1>{{stock_data["name"]}} | {{stock_data["tickor"]}}</h1>
+{% endblock %}
+
+{% block PR_section %}
+    <!-- Adding the summary -->
+    {{ stock_data["PR"] }}
+{% endblock %}
+
+{% block fundamentals_section %}
+<!-- Adding all of the neceessary fundamental data -->
+<p> Price-Earnings Ratio: {{stock_data["PE"]}} </p>
+<p> Today's High: {{stock_data["high"]}} </p>
+<p> Today's Low: {{stock_data["low"]}} </p>
+{% endblock %}
+

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block Portfolio_Section %}
+<section class="portfolio_section main">
+    <div class="stocks_area">
+        <h1>Add To Your Portfolio</h1>
+        <p>Create a stock portfolio that balances diversification across different sectors. If you are looking for someone stock ticker ideas, check out <a style="color:green" href="https://stockanalysis.com/stocks/industry/" target="_blank">this link!</a> </p>
+        <!-- Creating the main search bar for the website -->
+        <form action="/" method="post" class="search_form_area">
+            <input autocomplete="off" autofocus id="stock_name" name="stock_name" placeholder="Stock Ticker" type="text">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="chart_area">
+        <!-- adding the pie chart -->
+        <div id="pie_chart"></div>
+    </div>
+</section>
+<!-- Bottom Area with the stock list-->
+<div class="bottom_main">
+    <section class="stock_list_section main">
+        <h3>Your Stocks</h3>
+        <div class="stock_area">
+            <!-- adding all of the stocks as "stock tiles" -->
+            {% for i in stock_list_info%}
+                <p class="stock_tile">{{i}} - {{stock_list_info[i]}}</p>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}
