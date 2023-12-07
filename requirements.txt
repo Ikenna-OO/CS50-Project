@@ -1,0 +1,9 @@
+pandas
+flask
+plotly
+json
+yfinance
+requests
+Sqlite3
+os
+langchain
