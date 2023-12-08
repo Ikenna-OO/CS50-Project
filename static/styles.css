@@ -73,7 +73,7 @@ body{
     background: rgb(237, 237, 237);
 }
 .stock_list_section{
-    height: 500px;
+    min-height: 500px;
     padding: 50px 0px;
 }
 
@@ -148,8 +148,8 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 50px;
-    height: 500px;
+    padding: 50px 0px;
+    min-height: 500px;
 }
 .stock_info_section h3{
     padding-bottom: 10px;

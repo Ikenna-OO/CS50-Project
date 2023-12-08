@@ -41,7 +41,10 @@ def get_index_page():
 
         # Google has two different tickers for nearly the same. It's a bit of an edge-case, but we're
         # only going to allow people to add the really publicly traded stock
-        if stock_ticker == "GOOG":
+        try:
+            if stock_ticker.upper() == "GOOG":
+                return redirect("/")
+        except:
             return redirect("/")
 
         # if there's no text inputted, then simply refresh the page
